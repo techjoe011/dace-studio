@@ -415,7 +415,7 @@ export const externalProjects = {
   ],
   apps: [
     {
-      title: 'ECZ Grade 12 Past Exam Papers',
+      title: 'LearnMo',
       url: 'https://play.google.com/store/apps/details?id=com.my.dacetechinternational.eczgrade12pastexampapers',
       category: 'Android App',
       description: 'A study support app that gives students easier access to revision material and exam preparation resources.',
