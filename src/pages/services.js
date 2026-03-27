@@ -10,7 +10,7 @@ export default function Services() {
         <title>Services | Brand, Design, Development & More - Dace Media</title>
         <meta
           name="description"
-          content="Explore Dace Media services across branding, websites, app development, social media design, paid media, AI utilization, photography, videography, and creative direction."
+          content="Explore Dace Media services across branding, websites, custom systems, app development, social media design, paid media, AI utilization, photography, videography, and creative direction."
         />
       </Head>
 
@@ -27,7 +27,8 @@ export default function Services() {
             </div>
             <p className="max-w-2xl text-lg leading-relaxed text-stone-600">
               We work across a range of disciplines and mediums to solve the creative and
-              communications challenges that matter most to your brand.
+              communications challenges that matter most to your brand, including custom digital
+              systems built for real operational needs.
             </p>
           </section>
 
@@ -35,16 +36,34 @@ export default function Services() {
             {services.map((service) => (
               <article
                 key={service.slug}
-                className="grid gap-8 rounded-[2.25rem] border border-black/5 bg-white p-8 lg:grid-cols-[0.8fr_1.2fr]"
+                className={`grid gap-8 border border-black/5 p-8 lg:grid-cols-[0.8fr_1.2fr] ${
+                  service.slug === 'custom-systems-tools'
+                    ? 'rounded-[1.5rem] bg-[#e7ddd0] shadow-[0_24px_80px_rgba(28,25,23,0.08)]'
+                    : 'rounded-[1.4rem] bg-white'
+                }`}
               >
                 <div>
-                  <p className="text-xs uppercase tracking-[0.28em] text-stone-500">{service.title}</p>
+                  <p className="text-xs uppercase tracking-[0.28em] text-stone-500">
+                    {service.slug === 'custom-systems-tools' ? 'Featured Capability' : service.title}
+                  </p>
+                  {service.slug === 'custom-systems-tools' && (
+                    <p className="mt-3 text-sm font-medium uppercase tracking-[0.18em] text-stone-700">
+                      {service.title}
+                    </p>
+                  )}
                   <h2 className="mt-4 text-3xl font-semibold tracking-[-0.03em] sm:text-4xl">{service.headline}</h2>
                   <p className="mt-5 max-w-xl text-base leading-relaxed text-stone-600">{service.description}</p>
                 </div>
                 <div className="grid gap-4 sm:grid-cols-2">
                   {service.items.map((item) => (
-                    <div key={item} className="rounded-[1.4rem] bg-stone-50 p-5 text-sm font-medium text-stone-700">
+                    <div
+                      key={item}
+                      className={`p-5 text-sm font-medium text-stone-700 ${
+                        service.slug === 'custom-systems-tools'
+                          ? 'rounded-[1rem] bg-[#f6f1e7]'
+                          : 'rounded-[1rem] bg-stone-50'
+                      }`}
+                    >
                       {item}
                     </div>
                   ))}

@@ -76,6 +76,20 @@ export const services = [
     ],
   },
   {
+    slug: 'custom-systems-tools',
+    title: 'Custom Systems & Internal Tools',
+    headline: 'Systems built around how your business actually works.',
+    description:
+      'We design and build custom internal systems, dashboards, portals, and workflow tools for teams that need more than an off-the-shelf product. The goal is practical software that reduces friction, improves visibility, and supports daily operations.',
+    items: [
+      'Custom business systems',
+      'Internal dashboards and portals',
+      'Workflow and operations tools',
+      'Admin panels and reporting interfaces',
+      'Ongoing improvement and support',
+    ],
+  },
+  {
     slug: 'social-media-design',
     title: 'Social Media Design',
     headline: 'Content that earns attention.',

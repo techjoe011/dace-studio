@@ -110,6 +110,47 @@ export default function Home() {
             </div>
           </motion.section>
 
+          <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.25 }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            className="mx-auto max-w-7xl px-6 pb-24"
+          >
+            <div className="grid gap-6 rounded-[1.4rem] border border-black/5 bg-[#e7ddd0] p-6 lg:grid-cols-[1.15fr_0.85fr] lg:p-8">
+              <div className="rounded-[1.1rem] border border-black/5 bg-[#f6f1e7] p-6 lg:p-8">
+                <p className="text-xs uppercase tracking-[0.3em] text-stone-500">Software Capability</p>
+                <h2 className="mt-4 max-w-2xl text-4xl font-semibold uppercase leading-[1.02] tracking-[0.01em] text-stone-900 sm:text-5xl">
+                  We also build custom systems for real business operations.
+                </h2>
+                <p className="mt-5 max-w-2xl text-base leading-relaxed text-stone-600">
+                  Beyond campaigns and websites, we design and build internal tools, dashboards,
+                  portals, and workflow systems tailored to how your team actually works.
+                </p>
+                <Link
+                  href="/services"
+                  className="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.18em] text-stone-900"
+                >
+                  Explore services <ArrowUpRight size={16} />
+                </Link>
+              </div>
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+                <div className="rounded-[1rem] border border-black/5 bg-white p-5">
+                  <p className="text-xs uppercase tracking-[0.24em] text-stone-500">Build</p>
+                  <p className="mt-3 text-base leading-relaxed text-stone-700">
+                    Dashboards, admin panels, portals, and internal business systems.
+                  </p>
+                </div>
+                <div className="rounded-[1rem] border border-black/5 bg-white p-5">
+                  <p className="text-xs uppercase tracking-[0.24em] text-stone-500">Support</p>
+                  <p className="mt-3 text-base leading-relaxed text-stone-700">
+                    Ongoing improvements, implementation support, and issue resolution.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.section>
+
           <section className="mx-auto max-w-7xl px-6 pb-24">
             <div className="mb-8 rounded-[1.5rem] border border-black/5 bg-[#e7ddd0] p-5 shadow-[0_24px_80px_rgba(28,25,23,0.06)] lg:p-6">
               <div className="grid gap-6">
