@@ -385,7 +385,7 @@ export const newsPosts = [
     excerpt:
       'The biggest misunderstanding about AI in creative work is that its best use is replacing the last step.',
     image:
-      'https://images.unsplash.com/photo-1745674684587-bc050b00ad7e8?auto=format&fit=crop&fm=jpg&q=80&w=1600',
+      'https://images.unsplash.com/photo-1641736494173-e7d5775121b2?auto=format&fit=crop&fm=jpg&q=80&w=1600',
     body: [
       'The biggest misunderstanding about AI in creative work is that its best use is replacing the last step. That is usually where it is weakest. Final outputs need judgement, restraint, and taste. Those are not the places where speed alone helps much.',
       'AI is more useful earlier. It is good at opening up the search space. It can help compare angles, summarise research, pressure-test a brief, or generate starting points that a team can reject. This matters because the early stages of a project are often bottlenecked by blank-page friction.',
