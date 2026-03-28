@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { motion } from 'framer-motion'
+import { BookOpenText, BrainCircuit, Newspaper, NotebookPen } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { brand, newsPosts } from '../data/siteContent'
@@ -49,7 +50,12 @@ export default function NewsPage() {
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
               className="rounded-[1.35rem] border border-black/5 bg-[#e8ddd0] p-8 shadow-[0_20px_60px_rgba(28,25,23,0.06)]"
             >
-              <p className="text-xs uppercase tracking-[0.32em] text-stone-500">News</p>
+              <div className="flex items-center gap-4 text-stone-600">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white/70">
+                  <Newspaper className="h-5 w-5" strokeWidth={1.7} />
+                </div>
+                <p className="text-xs uppercase tracking-[0.32em] text-stone-500">News</p>
+              </div>
               <h1 className="mt-4 max-w-3xl text-5xl font-semibold leading-[0.94] tracking-[-0.04em] sm:text-7xl">
                 Essays, notes, and ideas from the studio.
               </h1>
@@ -66,19 +72,28 @@ export default function NewsPage() {
               className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1"
             >
               <div className="rounded-[1rem] border border-black/5 bg-white p-5">
-                <p className="text-[11px] uppercase tracking-[0.24em] text-stone-500">Writing Mode</p>
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#f1ebe1] text-stone-700">
+                  <NotebookPen className="h-6 w-6" strokeWidth={1.7} />
+                </div>
+                <p className="mt-6 text-[11px] uppercase tracking-[0.24em] text-stone-500">Writing Mode</p>
                 <p className="mt-3 text-sm leading-relaxed text-stone-700">
                   Plainspoken, reflective, idea-led.
                 </p>
               </div>
               <div className="rounded-[1rem] border border-black/5 bg-[#dde5ef] p-5">
-                <p className="text-[11px] uppercase tracking-[0.24em] text-stone-500">Topics</p>
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white/60 text-stone-700">
+                  <BrainCircuit className="h-6 w-6" strokeWidth={1.7} />
+                </div>
+                <p className="mt-6 text-[11px] uppercase tracking-[0.24em] text-stone-500">Topics</p>
                 <p className="mt-3 text-sm leading-relaxed text-stone-700">
                   Creative direction, media systems, digital execution, and AI workflows.
                 </p>
               </div>
               <div className="rounded-[1rem] border border-black/5 bg-[#efe4d6] p-5">
-                <p className="text-[11px] uppercase tracking-[0.24em] text-stone-500">Studio</p>
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white/60 text-stone-700">
+                  <BookOpenText className="h-6 w-6" strokeWidth={1.7} />
+                </div>
+                <p className="mt-6 text-[11px] uppercase tracking-[0.24em] text-stone-500">Studio</p>
                 <p className="mt-3 text-sm leading-relaxed text-stone-700">
                   {brand.foundedLabel} · {brand.email}
                 </p>

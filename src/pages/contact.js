@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { useState } from 'react'
-import { Mail, Phone, Instagram, Facebook, Linkedin } from 'lucide-react'
+import { Mail, Phone, Instagram, Facebook, Linkedin, MessageSquareText, Sparkles } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { brand } from '../data/siteContent'
@@ -58,7 +58,12 @@ export default function Contact() {
         <main className="mx-auto max-w-7xl px-6 pb-24 pt-36">
           <section className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
             <div>
-              <p className="text-xs uppercase tracking-[0.3em] text-stone-500">Contact</p>
+              <div className="flex items-center gap-4 text-stone-600">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-black/10 bg-[#e7ddd0]">
+                  <MessageSquareText className="h-5 w-5" strokeWidth={1.7} />
+                </div>
+                <p className="text-xs uppercase tracking-[0.3em] text-stone-500">Contact</p>
+              </div>
               <h1 className="mt-4 text-5xl font-semibold leading-[0.94] tracking-[-0.04em] sm:text-7xl">
                 We are ready to go. Are you?
               </h1>
@@ -70,14 +75,18 @@ export default function Contact() {
 
             <div className="grid gap-6 sm:grid-cols-2">
               <a href={`mailto:${brand.email}`} className="rounded-[2rem] border border-black/5 bg-white p-7">
-                <Mail className="text-stone-700" />
-                <p className="mt-6 text-xs uppercase tracking-[0.28em] text-stone-500">Email</p>
+                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#f1ebe1] text-stone-700">
+                  <Mail className="h-7 w-7" strokeWidth={1.7} />
+                </div>
+                <p className="mt-7 text-xs uppercase tracking-[0.28em] text-stone-500">Email</p>
                 <p className="mt-3 text-xl font-semibold">{brand.email}</p>
                 <p className="mt-2 text-sm text-stone-600">{brand.altEmail}</p>
               </a>
               <a href={`tel:${brand.phone.replace(/\s+/g, '')}`} className="rounded-[2rem] border border-black/5 bg-white p-7">
-                <Phone className="text-stone-700" />
-                <p className="mt-6 text-xs uppercase tracking-[0.28em] text-stone-500">Phone</p>
+                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#dde5ef] text-stone-700">
+                  <Phone className="h-7 w-7" strokeWidth={1.7} />
+                </div>
+                <p className="mt-7 text-xs uppercase tracking-[0.28em] text-stone-500">Phone</p>
                 <p className="mt-3 text-xl font-semibold">{brand.phone}</p>
                 <p className="mt-2 text-sm text-stone-600">{brand.foundedLabel}</p>
               </a>
@@ -86,7 +95,12 @@ export default function Contact() {
 
           <section className="mt-16 grid gap-8 lg:grid-cols-[1fr_0.8fr]">
             <div className="rounded-[2.5rem] border border-black/5 bg-white p-8 sm:p-10">
-              <p className="text-xs uppercase tracking-[0.28em] text-stone-500">Project Enquiries</p>
+              <div className="flex items-center gap-4 text-stone-600">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#f1ebe1]">
+                  <Sparkles className="h-5 w-5" strokeWidth={1.7} />
+                </div>
+                <p className="text-xs uppercase tracking-[0.28em] text-stone-500">Project Enquiries</p>
+              </div>
               <form className="mt-8 grid gap-5" onSubmit={submitEnquiry}>
                 <label className="grid gap-2 text-sm text-stone-600">
                   <span>Your Name</span>
@@ -151,7 +165,12 @@ export default function Contact() {
             </div>
 
             <div className="rounded-[2.5rem] bg-[#1c1917] p-8 text-white sm:p-10">
-              <p className="text-xs uppercase tracking-[0.28em] text-stone-400">Follow</p>
+              <div className="flex items-center gap-4 text-stone-200">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white/10">
+                  <Instagram className="h-5 w-5" strokeWidth={1.7} />
+                </div>
+                <p className="text-xs uppercase tracking-[0.28em] text-stone-400">Follow</p>
+              </div>
               <p className="mt-4 text-3xl font-semibold tracking-[-0.03em]">{brand.socialHandle}</p>
               <div className="mt-8 space-y-4">
                 {socials.map(({ label, href, icon: Icon }) => (

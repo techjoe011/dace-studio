@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, Compass, Cpu, Sparkles } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
@@ -95,16 +95,25 @@ export default function Home() {
               </div>
               <div className="grid gap-5 sm:grid-cols-3">
                 <div className="rounded-[1.1rem] border border-black/5 bg-white p-6">
-                  <p className="text-xs uppercase tracking-[0.28em] text-stone-500">Strategy</p>
-                  <p className="mt-4 text-lg leading-relaxed text-stone-700">Brand development, positioning, and communication systems.</p>
+                  <div className="flex h-20 w-20 items-center justify-center rounded-full bg-[#efe5d7] text-stone-800">
+                    <Compass className="h-10 w-10" strokeWidth={1.6} />
+                  </div>
+                  <p className="mt-7 text-xs uppercase tracking-[0.28em] text-stone-500">Strategy</p>
+                  <p className="mt-5 text-lg leading-relaxed text-stone-700">Brand development, positioning, and communication systems.</p>
                 </div>
                 <div className="rounded-[1.1rem] border border-black/5 bg-white p-6">
-                  <p className="text-xs uppercase tracking-[0.28em] text-stone-500">Development</p>
-                  <p className="mt-4 text-lg leading-relaxed text-stone-700">Full-stack development across websites, landing pages, and mobile products.</p>
+                  <div className="flex h-20 w-20 items-center justify-center rounded-full bg-[#dde5ef] text-stone-800">
+                    <Cpu className="h-10 w-10" strokeWidth={1.6} />
+                  </div>
+                  <p className="mt-7 text-xs uppercase tracking-[0.28em] text-stone-500">Development</p>
+                  <p className="mt-5 text-lg leading-relaxed text-stone-700">Full-stack development across websites, landing pages, and mobile products.</p>
                 </div>
                 <div className="rounded-[1.1rem] border border-black/5 bg-white p-6">
-                  <p className="text-xs uppercase tracking-[0.28em] text-stone-500">Execution</p>
-                  <p className="mt-4 text-lg leading-relaxed text-stone-700">Websites, apps, campaigns, photography, videography, and content.</p>
+                  <div className="flex h-20 w-20 items-center justify-center rounded-full bg-[#e7eddc] text-stone-800">
+                    <Sparkles className="h-10 w-10" strokeWidth={1.6} />
+                  </div>
+                  <p className="mt-7 text-xs uppercase tracking-[0.28em] text-stone-500">Execution</p>
+                  <p className="mt-5 text-lg leading-relaxed text-stone-700">Websites, apps, campaigns, photography, videography, and content.</p>
                 </div>
               </div>
             </div>

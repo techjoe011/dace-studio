@@ -210,6 +210,150 @@ export const process = [
   },
 ]
 
+export const paidMediaCaseStudies = [
+  {
+    client: 'Nangoma Safari Lodge',
+    period: 'March 2026',
+    overview:
+      'Two campaigns were structured for different stages of the funnel: one to grow audience awareness and one to capture higher-intent booking interest.',
+    note:
+      'Both campaigns delivered strong early efficiency signals before a separate delivery issue paused spend.',
+    campaigns: [
+      {
+        name: 'Audience Growth Campaign',
+        objective: 'Brand awareness and audience building',
+        kpi: 'Follows or likes',
+        results: '896 follows or likes',
+        costPerResult: 'Around $0.02 per follow or like',
+        reach: '27,534 accounts reached',
+        analysis:
+          'The campaign produced strong follower growth at a very low acquisition cost, showing that the creative and audience selection were highly aligned.',
+      },
+      {
+        name: 'Booking Leads Campaign',
+        objective: 'Lead generation',
+        kpi: 'Meta leads',
+        results: '84 leads',
+        costPerResult: 'Under $0.40 per lead',
+        reach: '22,097 accounts reached',
+        analysis:
+          'Lead volume and cost efficiency indicated that the offer and targeting were compelling enough to drive high-intent actions at a strong cost per result.',
+      },
+    ],
+  },
+]
+
+export const caseStudies = [
+  {
+    slug: 'nangoma-safari-lodge',
+    category: 'Paid Media',
+    client: 'Nangoma Safari Lodge',
+    period: 'March 2026',
+    title: 'Using paid media to grow awareness and capture booking intent.',
+    summary:
+      'A two-part campaign structure was used to build audience familiarity at the top of the funnel while also driving stronger booking interest through lead capture.',
+    marketContext:
+      'For hospitality brands marketing into Zambia, awareness alone is rarely enough. People often need repeated exposure and stronger trust signals before moving from interest to enquiry.',
+    challenge:
+      'The work needed to support two different objectives at once: lower-friction audience growth and higher-intent lead generation.',
+    approach: [
+      'Separated campaign structure by funnel intent instead of forcing one message to do everything.',
+      'Measured performance through result efficiency, reach, and action quality.',
+      'Evaluated creative resonance through audience-growth cost and lead-generation response.',
+    ],
+    whyItWorked:
+      'The campaign structure matched how many Zambia-based audiences move: first warming the market with familiar brand presence, then giving interested users a clearer booking action.',
+    outcomes: [
+      'Generated 896 follows or likes at around $0.02 per result.',
+      'Produced 84 leads at under $0.40 per lead.',
+      'Reached more than 22,000 to 27,000 accounts across the two campaigns.',
+    ],
+    metrics: [
+      { label: 'Audience Growth', value: '896 follows or likes' },
+      { label: 'Lead Generation', value: '84 leads' },
+      { label: 'Cost Efficiency', value: 'Around $0.02 and under $0.40' },
+    ],
+  },
+  {
+    slug: 'learnmo',
+    category: 'App Development',
+    client: 'LearnMo',
+    period: 'Product Case',
+    title: 'Building a study support app around easier access to revision resources.',
+    summary:
+      'LearnMo was positioned as a simpler way for students to reach study materials and exam-preparation resources from mobile devices.',
+    marketContext:
+      'In Zambia, student-facing digital tools need to work for mobile-first usage patterns and reduce friction quickly. Utility matters more than feature overload.',
+    challenge:
+      'Students needed a more direct, portable way to engage revision content without relying on scattered sources.',
+    approach: [
+      'Focused the product around accessibility, practical navigation, and repeat student use.',
+      'Built the app experience around utility first rather than visual noise.',
+      'Framed the product as a tool that supports consistent exam preparation.',
+    ],
+    whyItWorked:
+      'The value proposition is straightforward for the market: easier access, less searching, and a product shaped around how students actually use their phones for revision.',
+    outcomes: [
+      'Created a clearer digital access point for revision support.',
+      'Expanded Dace’s proof of capability beyond websites into product and app delivery.',
+      'Demonstrated the studio’s ability to design and ship practical digital tools.',
+    ],
+    link: 'https://play.google.com/store/apps/details?id=com.my.dacetechinternational.eczgrade12pastexampapers',
+  },
+  {
+    slug: 'agricomm',
+    category: 'Website Design & Development',
+    client: 'Agricomm Media & Communications',
+    period: 'Website Case',
+    title: 'Designing a web platform that communicates clearly and strengthens digital presence.',
+    summary:
+      'The site was structured to help Agricomm present information more clearly, improve trust, and give the organisation a more credible digital home.',
+    marketContext:
+      'For communication and sector-facing organisations in Zambia, credibility is often shaped by how clearly a website explains purpose, services, and relevance to local audiences.',
+    challenge:
+      'The website needed to balance clarity, usefulness, and organisational credibility for a communications-focused audience.',
+    approach: [
+      'Structured the site around information access and trust-building.',
+      'Used design and development decisions that support readability and functional navigation.',
+      'Treated the website as a communication tool rather than just a visual brochure.',
+    ],
+    whyItWorked:
+      'The site responds to a local credibility problem many organisations face: when the structure is unclear, trust drops quickly. Clearer presentation helps the organisation feel more established and easier to engage.',
+    outcomes: [
+      'Delivered a stronger online presence for the organisation.',
+      'Improved the clarity of how the platform presents its work and purpose.',
+      'Added a more professional digital touchpoint for audience interaction.',
+    ],
+    link: 'https://www.agricomm.org/',
+  },
+  {
+    slug: 'zicta-awards',
+    category: 'Campaign Design',
+    client: 'ZICTA',
+    period: '2025',
+    title: 'Shaping a campaign identity for Zambia’s ICT, postal, and courier awards.',
+    summary:
+      'The campaign needed to look authoritative and public-facing at the same time, with visuals that could carry across multiple digital touchpoints.',
+    marketContext:
+      'For Zambia-facing institutional campaigns, the challenge is often balance: the work must feel credible and formal without becoming visually cold or inaccessible to the public.',
+    challenge:
+      'The work had to balance prestige, visibility, and consistency for a formal sector-focused campaign.',
+    approach: [
+      'Built a campaign identity that supported authority without feeling visually distant.',
+      'Designed assets for digital rollout, public visibility, and recognisable consistency.',
+      'Used creative direction to unify the campaign across social and promotional applications.',
+    ],
+    whyItWorked:
+      'The visual direction reflects how public-facing campaigns in Zambia often need to behave: serious enough for institutional trust, but clear and visible enough for wider public attention.',
+    outcomes: [
+      'Created a stronger public-facing identity for the inaugural awards campaign.',
+      'Delivered visuals that supported recognition across campaign touchpoints.',
+      'Added a clearer example of Dace’s campaign-design capability.',
+    ],
+    media: '/images/works/ZICTA/F92vuo5WoAApeYT.jpg',
+  },
+]
+
 export const newsPosts = [
   {
     slug: 'why-clear-creative-work-wins',

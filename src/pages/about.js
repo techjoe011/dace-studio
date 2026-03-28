@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { motion } from 'framer-motion'
+import { Gem, Lightbulb, MapPin, ShieldCheck, Users } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { protectedImageProps, protectedVideoProps } from '../components/mediaProps'
@@ -28,6 +29,7 @@ const memoryVideos = [
   { title: 'Memory 02', src: '/images/works/memories/mem_02.mp4' },
 ]
 
+const beliefIcons = [Lightbulb, Gem]
 export default function About() {
   return (
     <>
@@ -45,7 +47,12 @@ export default function About() {
         <main className="mx-auto max-w-7xl px-6 pb-24 pt-36">
           <section className="grid gap-10 lg:grid-cols-[1fr_0.9fr]">
             <div>
-              <p className="text-xs uppercase tracking-[0.3em] text-stone-500">Introduction</p>
+              <div className="flex items-center gap-4 text-stone-600">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-black/10 bg-[#e7ddd0]">
+                  <Users className="h-5 w-5" strokeWidth={1.7} />
+                </div>
+                <p className="text-xs uppercase tracking-[0.3em] text-stone-500">Introduction</p>
+              </div>
               <h1 className="mt-4 text-5xl font-semibold leading-[0.94] tracking-[-0.04em] sm:text-7xl">
                 We are Dace Media.
               </h1>
@@ -68,13 +75,20 @@ export default function About() {
           </section>
 
           <section className="mt-20 grid gap-8 lg:grid-cols-2">
-            {beliefs.map((belief) => (
+            {beliefs.map((belief, index) => {
+              const Icon = beliefIcons[index] || Lightbulb
+              return (
               <div key={belief.title} className="rounded-[2rem] border border-black/5 bg-white p-8">
-                <p className="text-xs uppercase tracking-[0.28em] text-stone-500">Our Philosophy</p>
+                <div className="flex items-center gap-4 text-stone-600">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#f1ebe1]">
+                    <Icon className="h-5 w-5" strokeWidth={1.7} />
+                  </div>
+                  <p className="text-xs uppercase tracking-[0.28em] text-stone-500">Our Philosophy</p>
+                </div>
                 <h2 className="mt-4 text-3xl font-semibold tracking-[-0.03em]">{belief.title}</h2>
                 <p className="mt-4 text-base leading-relaxed text-stone-600">{belief.text}</p>
               </div>
-            ))}
+            )})}
           </section>
 
           <section className="mt-20 rounded-[2.5rem] bg-[#1c1917] p-8 text-white sm:p-10">
@@ -99,7 +113,12 @@ export default function About() {
           <section className="mt-20">
             <div className="mb-8 grid gap-6 lg:grid-cols-[0.72fr_1.28fr]">
               <div className="rounded-[1.4rem] border border-black/5 bg-[#e7ddd0] p-8">
-                <p className="text-xs uppercase tracking-[0.28em] text-stone-500">Team</p>
+                <div className="flex items-center gap-4 text-stone-600">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white/70">
+                    <Users className="h-5 w-5" strokeWidth={1.7} />
+                  </div>
+                  <p className="text-xs uppercase tracking-[0.28em] text-stone-500">Team</p>
+                </div>
                 <h2 className="mt-4 text-4xl font-semibold tracking-[-0.03em]">The team behind the work.</h2>
                 <p className="mt-5 text-base leading-relaxed text-stone-600">
                   A compact multidisciplinary team spanning strategy, design, development, media,
@@ -108,7 +127,8 @@ export default function About() {
               </div>
 
               <div className="grid gap-5 sm:grid-cols-2">
-                {teamProfiles.map((profile, index) => (
+                {teamProfiles.map((profile, index) => {
+                  return (
                   <motion.div
                     key={profile.title}
                     initial={{ opacity: 0, y: 22 }}
@@ -117,11 +137,15 @@ export default function About() {
                     transition={{ duration: 0.55, delay: index * 0.06, ease: [0.22, 1, 0.36, 1] }}
                     className="rounded-[1.1rem] border border-black/5 bg-white p-6"
                   >
-                    <p className="text-xs uppercase tracking-[0.22em] text-stone-500">Team Role</p>
+                    <div className="overflow-hidden rounded-[1rem] border border-black/5 bg-[linear-gradient(180deg,#f0e6d8_0%,#e5d5be_100%)]">
+                      <div className="min-h-[240px]" />
+                    </div>
+
+                    <p className="mt-6 text-xs uppercase tracking-[0.22em] text-stone-500">Team Role</p>
                     <h3 className="mt-3 text-2xl font-semibold">{profile.title}</h3>
                     <p className="mt-4 text-sm leading-relaxed text-stone-600">{profile.text}</p>
                   </motion.div>
-                ))}
+                )})}
               </div>
             </div>
           </section>
@@ -129,7 +153,12 @@ export default function About() {
           <section className="mt-20 rounded-[1.5rem] border border-black/5 bg-white p-8">
             <div className="mb-8 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
               <div>
-                <p className="text-xs uppercase tracking-[0.28em] text-stone-500">Memories</p>
+                <div className="flex items-center gap-4 text-stone-600">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#f1ebe1]">
+                    <Gem className="h-5 w-5" strokeWidth={1.7} />
+                  </div>
+                  <p className="text-xs uppercase tracking-[0.28em] text-stone-500">Memories</p>
+                </div>
                 <h2 className="mt-4 text-4xl font-semibold tracking-[-0.03em]">Memories with our creative partners.</h2>
               </div>
               <p className="max-w-xl text-sm leading-relaxed text-stone-600">
@@ -164,7 +193,12 @@ export default function About() {
 
           <section className="mt-20 grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
             <div className="rounded-[2rem] border border-black/5 bg-[#efe8dc] p-8">
-              <p className="text-xs uppercase tracking-[0.28em] text-stone-500">The Studio</p>
+              <div className="flex items-center gap-4 text-stone-600">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white/70">
+                  <MapPin className="h-5 w-5" strokeWidth={1.7} />
+                </div>
+                <p className="text-xs uppercase tracking-[0.28em] text-stone-500">The Studio</p>
+              </div>
               <h2 className="mt-4 text-3xl font-semibold tracking-[-0.03em]">{brand.studioName}</h2>
               <p className="mt-4 text-base leading-relaxed text-stone-600">{brand.tagline}</p>
               <div className="mt-8 space-y-2 text-sm text-stone-700">
@@ -176,7 +210,12 @@ export default function About() {
             </div>
 
             <div className="rounded-[2rem] border border-black/5 bg-white p-8">
-              <p className="text-xs uppercase tracking-[0.28em] text-stone-500">Clients</p>
+              <div className="flex items-center gap-4 text-stone-600">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#f1ebe1]">
+                  <ShieldCheck className="h-5 w-5" strokeWidth={1.7} />
+                </div>
+                <p className="text-xs uppercase tracking-[0.28em] text-stone-500">Clients</p>
+              </div>
               <h2 className="mt-4 text-3xl font-semibold tracking-[-0.03em]">Trusted by brands across Zambia and beyond.</h2>
               <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
                 {clientLogos.map((logo) => (

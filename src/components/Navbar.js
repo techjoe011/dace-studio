@@ -9,6 +9,7 @@ export default function Navbar() {
 
   const navLinks = [
     { name: 'Work', href: '/work' },
+    { name: 'Case Studies', href: '/case-studies' },
     { name: 'News', href: '/news' },
     { name: 'Services', href: '/services' },
     { name: 'Support', href: '/support' },

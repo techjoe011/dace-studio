@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { useState } from 'react'
+import { Bug, CircleHelp, LifeBuoy, Send, Wrench } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { brand } from '../data/siteContent'
@@ -55,7 +56,12 @@ export default function SupportPage() {
         <main className="mx-auto max-w-7xl px-6 pb-24 pt-36">
           <section className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
             <div className="rounded-[1.35rem] border border-black/5 bg-[#e8ddd0] p-8 shadow-[0_20px_60px_rgba(28,25,23,0.05)]">
-              <p className="text-xs uppercase tracking-[0.3em] text-stone-500">Software Support</p>
+              <div className="flex items-center gap-4 text-stone-600">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white/70">
+                  <LifeBuoy className="h-5 w-5" strokeWidth={1.7} />
+                </div>
+                <p className="text-xs uppercase tracking-[0.3em] text-stone-500">Software Support</p>
+              </div>
               <h1 className="mt-4 text-5xl font-semibold leading-[0.94] tracking-[-0.04em] sm:text-7xl">
                 Send a support ticket.
               </h1>
@@ -67,15 +73,24 @@ export default function SupportPage() {
 
             <div className="grid gap-4 sm:grid-cols-3">
               <div className="rounded-[1rem] border border-black/5 bg-white p-5">
-                <p className="text-[11px] uppercase tracking-[0.22em] text-stone-500">Bug Reports</p>
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#f1ebe1] text-stone-700">
+                  <Bug className="h-6 w-6" strokeWidth={1.7} />
+                </div>
+                <p className="mt-6 text-[11px] uppercase tracking-[0.22em] text-stone-500">Bug Reports</p>
                 <p className="mt-3 text-sm leading-relaxed text-stone-700">Report things that are broken, inconsistent, or no longer working as expected.</p>
               </div>
               <div className="rounded-[1rem] border border-black/5 bg-[#dde5ef] p-5">
-                <p className="text-[11px] uppercase tracking-[0.22em] text-stone-500">Change Requests</p>
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white/60 text-stone-700">
+                  <Wrench className="h-6 w-6" strokeWidth={1.7} />
+                </div>
+                <p className="mt-6 text-[11px] uppercase tracking-[0.22em] text-stone-500">Change Requests</p>
                 <p className="mt-3 text-sm leading-relaxed text-stone-700">Ask for content edits, feature adjustments, or interface changes.</p>
               </div>
               <div className="rounded-[1rem] border border-black/5 bg-[#efe4d6] p-5">
-                <p className="text-[11px] uppercase tracking-[0.22em] text-stone-500">Response</p>
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white/60 text-stone-700">
+                  <Send className="h-6 w-6" strokeWidth={1.7} />
+                </div>
+                <p className="mt-6 text-[11px] uppercase tracking-[0.22em] text-stone-500">Response</p>
                 <p className="mt-3 text-sm leading-relaxed text-stone-700">Tickets are sent directly to {brand.email} through your email app.</p>
               </div>
             </div>
@@ -83,7 +98,12 @@ export default function SupportPage() {
 
           <section className="mt-16 grid gap-8 lg:grid-cols-[1fr_0.7fr]">
             <div className="rounded-[1.35rem] border border-black/5 bg-white p-8 sm:p-10">
-              <p className="text-xs uppercase tracking-[0.28em] text-stone-500">Ticket Form</p>
+              <div className="flex items-center gap-4 text-stone-600">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#f1ebe1]">
+                  <CircleHelp className="h-5 w-5" strokeWidth={1.7} />
+                </div>
+                <p className="text-xs uppercase tracking-[0.28em] text-stone-500">Ticket Form</p>
+              </div>
               <form className="mt-8 grid gap-5" onSubmit={submitTicket}>
                 <div className="grid gap-5 md:grid-cols-2">
                   <label className="grid gap-2 text-sm text-stone-600">
@@ -182,7 +202,12 @@ export default function SupportPage() {
             </div>
 
             <div className="rounded-[1.35rem] bg-[#1c1917] p-8 text-white sm:p-10">
-              <p className="text-xs uppercase tracking-[0.28em] text-stone-400">How It Works</p>
+              <div className="flex items-center gap-4 text-stone-200">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white/10">
+                  <LifeBuoy className="h-5 w-5" strokeWidth={1.7} />
+                </div>
+                <p className="text-xs uppercase tracking-[0.28em] text-stone-400">How It Works</p>
+              </div>
               <div className="mt-6 space-y-5">
                 <div className="rounded-[1rem] border border-white/10 bg-white/5 p-5">
                   <p className="text-[11px] uppercase tracking-[0.22em] text-stone-400">1. Fill in the ticket</p>

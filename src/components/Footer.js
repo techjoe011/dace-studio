@@ -26,6 +26,7 @@ export default function Footer() {
             <p className="text-xs uppercase tracking-[0.28em] text-stone-500">Explore</p>
             <div className="mt-5 grid gap-3 text-sm text-stone-800">
               <Link href="/work" className="hover:text-stone-950">Work</Link>
+              <Link href="/case-studies" className="hover:text-stone-950">Case Studies</Link>
               <Link href="/news" className="hover:text-stone-950">News</Link>
               <Link href="/services" className="hover:text-stone-950">Services</Link>
               <Link href="/about" className="hover:text-stone-950">About</Link>
