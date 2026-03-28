@@ -273,6 +273,11 @@ export const caseStudies = [
       { label: 'Lead Generation', value: '84 leads' },
       { label: 'Cost Efficiency', value: 'Around $0.02 and under $0.40' },
     ],
+    media: [
+      '/images/works/nangoma/643407914_122163125054931596_4660386370800936181_n.jpg',
+      '/images/works/nangoma/646203917_122164155272931596_298710169985431079_n.jpg',
+      '/images/works/nangoma/651765254_122165587376931596_2417616745099815555_n.jpg',
+    ],
   },
   {
     slug: 'learnmo',
@@ -298,6 +303,7 @@ export const caseStudies = [
       'Expanded Dace’s proof of capability beyond websites into product and app delivery.',
       'Demonstrated the studio’s ability to design and ship practical digital tools.',
     ],
+    media: ['/images/works/learnmo/learnmo.png'],
     link: 'https://play.google.com/store/apps/details?id=com.my.dacetechinternational.eczgrade12pastexampapers',
   },
   {
@@ -324,6 +330,7 @@ export const caseStudies = [
       'Improved the clarity of how the platform presents its work and purpose.',
       'Added a more professional digital touchpoint for audience interaction.',
     ],
+    media: ['/images/works/agricomm/agricomm.png'],
     link: 'https://www.agricomm.org/',
   },
   {
@@ -350,7 +357,7 @@ export const caseStudies = [
       'Delivered visuals that supported recognition across campaign touchpoints.',
       'Added a clearer example of Dace’s campaign-design capability.',
     ],
-    media: '/images/works/ZICTA/F92vuo5WoAApeYT.jpg',
+    media: ['/images/works/ZICTA/F92vuo5WoAApeYT.jpg'],
   },
 ]
 
@@ -361,6 +368,8 @@ export const newsPosts = [
     title: 'Why Clear Creative Work Wins',
     excerpt:
       'A lot of brand work fails for a simple reason: it tries to impress before it tries to communicate.',
+    image:
+      'https://images.unsplash.com/photo-1765758014805-a7a6cc272982?auto=format&fit=crop&fm=jpg&q=80&w=1600',
     body: [
       'A lot of creative work is built backwards. It starts with what looks expensive, what feels polished, or what resembles the brands people admire. That is usually a mistake. The first question is not how the work looks. The first question is what the work is trying to make easier.',
       'If a campaign is meant to drive signups, the message has to remove uncertainty. If a website is meant to build trust, the structure has to help people find the answer they came for. If a brand identity is meant to sharpen recognition, it has to be memorable before it is decorative.',
@@ -375,6 +384,8 @@ export const newsPosts = [
     title: 'AI Is Most Useful Before The Final Draft',
     excerpt:
       'The biggest misunderstanding about AI in creative work is that its best use is replacing the last step.',
+    image:
+      'https://images.unsplash.com/photo-1745674684587-bc050b00ad7e8?auto=format&fit=crop&fm=jpg&q=80&w=1600',
     body: [
       'The biggest misunderstanding about AI in creative work is that its best use is replacing the last step. That is usually where it is weakest. Final outputs need judgement, restraint, and taste. Those are not the places where speed alone helps much.',
       'AI is more useful earlier. It is good at opening up the search space. It can help compare angles, summarise research, pressure-test a brief, or generate starting points that a team can reject. This matters because the early stages of a project are often bottlenecked by blank-page friction.',
@@ -389,6 +400,8 @@ export const newsPosts = [
     title: 'Paid Media Is Not Just Buying Attention',
     excerpt:
       'Many brands treat paid media as a distribution problem when it is really a systems problem.',
+    image:
+      'https://images.unsplash.com/photo-1746014601552-4ed3d01da7e8?auto=format&fit=crop&fm=jpg&q=80&w=1600',
     body: [
       'Many brands treat paid media as a distribution problem. They focus on the budget, the placement, or the targeting. Those things matter, but they are not the whole system.',
       'A paid campaign only works when the message, creative, audience, landing page, and offer reinforce one another. If one part is weak, the rest has to work too hard. Better targeting cannot rescue a confusing offer. More spend cannot fix a landing page that makes action feel risky.',

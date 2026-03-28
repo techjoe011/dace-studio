@@ -12,6 +12,7 @@ import {
 } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import { protectedImageProps } from '../components/mediaProps'
 import { caseStudies } from '../data/siteContent'
 
 const categoryIcons = {
@@ -24,6 +25,69 @@ const categoryIcons = {
 function StudyIcon({ category, className = 'h-6 w-6' }) {
   const Icon = categoryIcons[category] || BriefcaseBusiness
   return <Icon className={className} strokeWidth={1.8} />
+}
+
+function SupportingVisual({ study }) {
+  if (study.media?.length) {
+    return (
+      <div className="overflow-hidden rounded-[1rem] border border-black/5 bg-white">
+        <div className="flex min-h-[240px] items-center justify-center p-3">
+          <img
+            src={study.media[0]}
+            alt={study.client}
+            className="h-full w-full object-contain"
+            {...protectedImageProps}
+          />
+        </div>
+      </div>
+    )
+  }
+
+  if (study.visualStyle === 'app') {
+    return (
+      <div className="overflow-hidden rounded-[1rem] border border-black/5 bg-[linear-gradient(180deg,#1f2937_0%,#334155_100%)] p-5 text-white">
+        <div className="rounded-[1rem] border border-white/10 bg-white/5 p-4">
+          <p className="text-[11px] uppercase tracking-[0.18em] text-stone-300">Mobile Product</p>
+          <div className="mt-5 flex justify-center">
+            <div className="w-[10.5rem] rounded-[1.8rem] border border-white/15 bg-[#0f172a] p-3 shadow-[0_24px_60px_rgba(15,23,42,0.35)]">
+              <div className="min-h-[210px] rounded-[1.2rem] bg-[linear-gradient(180deg,#f8fafc_0%,#dbeafe_100%)] p-4 text-stone-900">
+                <p className="text-[10px] uppercase tracking-[0.18em] text-stone-500">LearnMo</p>
+                <p className="mt-6 text-xl font-semibold leading-tight">Revision support built for easier repeat use.</p>
+                <div className="mt-6 grid gap-2">
+                  <div className="rounded-full bg-white/80 px-3 py-2 text-xs">Past papers</div>
+                  <div className="rounded-full bg-white/80 px-3 py-2 text-xs">Study access</div>
+                  <div className="rounded-full bg-white/80 px-3 py-2 text-xs">Mobile-first</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  return (
+    <div className="overflow-hidden rounded-[1rem] border border-black/5 bg-[linear-gradient(180deg,#e7ddd0_0%,#f6f1e7_100%)] p-5">
+      <div className="rounded-[1rem] border border-black/5 bg-white/70 p-5">
+        <p className="text-[11px] uppercase tracking-[0.18em] text-stone-500">Website Case</p>
+        <div className="mt-5 rounded-[0.9rem] border border-black/5 bg-[#f8fafc] p-4 shadow-[0_18px_40px_rgba(28,25,23,0.06)]">
+          <div className="flex items-center gap-2 border-b border-black/5 pb-3">
+            <span className="h-2.5 w-2.5 rounded-full bg-[#f59e0b]" />
+            <span className="h-2.5 w-2.5 rounded-full bg-[#ef4444]" />
+            <span className="h-2.5 w-2.5 rounded-full bg-[#10b981]" />
+          </div>
+          <div className="mt-4 grid gap-3">
+            <div className="h-6 w-2/3 rounded-full bg-[#dbeafe]" />
+            <div className="h-20 rounded-[0.8rem] bg-[#e2e8f0]" />
+            <div className="grid gap-3 sm:grid-cols-2">
+              <div className="h-16 rounded-[0.8rem] bg-[#f1f5f9]" />
+              <div className="h-16 rounded-[0.8rem] bg-[#f1f5f9]" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default function CaseStudies() {
@@ -105,6 +169,28 @@ export default function CaseStudies() {
                     </div>
                   ))}
                 </div>
+
+                {featuredStudy.media?.length ? (
+                  <div className="mt-8 grid gap-4 sm:grid-cols-3">
+                    {featuredStudy.media.map((src, index) => (
+                      <div
+                        key={src}
+                        className={`overflow-hidden rounded-[1rem] border border-black/5 bg-white ${
+                          index === 0 ? 'sm:col-span-2 sm:row-span-2' : ''
+                        }`}
+                      >
+                        <div className={`flex items-center justify-center p-3 ${index === 0 ? 'min-h-[360px]' : 'min-h-[172px]'}`}>
+                          <img
+                            src={src}
+                            alt={`${featuredStudy.client} visual ${index + 1}`}
+                            className="h-full w-full object-contain"
+                            {...protectedImageProps}
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ) : null}
               </div>
 
               <div className="grid gap-5">
@@ -189,6 +275,9 @@ export default function CaseStudies() {
                 <p className="mt-2 text-sm uppercase tracking-[0.18em] text-stone-500">
                   {study.period}
                 </p>
+                <div className="mt-5">
+                  <SupportingVisual study={study} />
+                </div>
                 <p className="mt-5 text-base leading-relaxed text-stone-700">{study.summary}</p>
 
                 <div className="mt-6 rounded-[1rem] border border-black/5 bg-white/70 p-5">

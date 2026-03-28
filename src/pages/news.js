@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { BookOpenText, BrainCircuit, Newspaper, NotebookPen } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import { protectedImageProps } from '../components/mediaProps'
 import { brand, newsPosts } from '../data/siteContent'
 
 const pageTitle = 'News | Dace Media'
@@ -144,6 +145,16 @@ export default function NewsPage() {
                     </div>
 
                     <div>
+                      {post.image ? (
+                        <div className="mb-8 overflow-hidden rounded-[1rem] border border-black/5">
+                          <img
+                            src={post.image}
+                            alt={post.title}
+                            className="h-[260px] w-full object-cover sm:h-[320px]"
+                            {...protectedImageProps}
+                          />
+                        </div>
+                      ) : null}
                       <h2 className="text-3xl font-semibold leading-tight tracking-[-0.03em] sm:text-4xl">
                         {post.title}
                       </h2>
